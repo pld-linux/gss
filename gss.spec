@@ -1,14 +1,18 @@
 Summary:	Implementation of General Security Service API
 Summary(pl):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.6
+Version:	0.0.7
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	3cc0bec343daa32f75de9d18665525b2
+# Source0-md5:	209807c8ffabc422666addd48e945166
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
+BuildRequires:	autoconf >= 2.58
+BuildRequires:	automake >= 1.7
+BuildRequires:	gettext-devel >= 0.12.1
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	shishi-devel >= 0.0.7
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,7 +59,17 @@ Statyczna biblioteka GSS.
 %setup -q
 %patch0 -p1
 
+# grrr, 2.59 not released yet
+# and they use some hacked version which is broken with pdksh, so we must rebuild
+%{__perl} -pi -e 's/(AC_PREREQ)\(2\.59\)/$1(2.58)/' configure.ac
+
 %build
+%{__gettextize}
+%{__libtoolize}
+%{__aclocal} -I m4 -I gl/m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 
 %{__make}
@@ -82,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc ANNOUNCE AUTHORS ChangeLog NEWS README* THANKS TODO
+%doc AUTHORS ChangeLog NEWS README* THANKS
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
