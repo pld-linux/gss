@@ -9,8 +9,7 @@ Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	3cc0bec343daa32f75de9d18665525b2
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
-BuildRequires:	pkgconfig
-BuildRequires:	shishi-devel >= 0.0.0
+BuildRequires:	shishi-devel >= 0.0.7
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +31,7 @@ Summary:	Header files for GSS library
 Summary(pl):	Pliki nag³ówkowe biblioteki GSS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	shishi-devel >= 0.0.0
+Requires:	shishi-devel >= 0.0.7
 
 %description devel
 Header files for GSS library.
