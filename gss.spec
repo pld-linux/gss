@@ -36,6 +36,7 @@ Summary:	Header files for GSS library
 Summary(pl):	Pliki nag³ówkowe biblioteki GSS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	shishi-devel >= 0.0.0
 
 %description devel
 Header files for GSS library.
