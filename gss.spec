@@ -1,17 +1,18 @@
 Summary:	Implementation of General Security Service API
 Summary(pl):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.9
+Version:	0.0.10
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	b054b5732273b25de28cf3ebaf2569a7
+# Source0-md5:	6bacdc00c1cf63dfba5fec79840320a3
+Source1:	%{name}-pl.po
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1.7
-BuildRequires:	gettext-devel >= 0.12.1
+BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	shishi-devel >= 0.0.7
 BuildRequires:	texinfo
@@ -34,7 +35,7 @@ SMTP/IMAP.
 Summary:	Header files for GSS library
 Summary(pl):	Pliki nag³ówkowe biblioteki GSS
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	shishi-devel >= 0.0.7
 
 %description devel
@@ -47,7 +48,7 @@ Pliki nag³ówkowe biblioteki GSS.
 Summary:	Static GSS library
 Summary(pl):	Statyczna biblioteka GSS
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static GSS library.
@@ -58,6 +59,10 @@ Statyczna biblioteka GSS.
 %prep
 %setup -q
 %patch0 -p1
+
+cp -f %{SOURCE1} po/pl.po
+echo 'pl' >> po/LINGUAS
+rm -f po/stamp-po
 
 # we don't have libtool 1.5a
 %{__perl} -pi -e 's/AC_LIBTOOL_TAGS//' configure.ac
@@ -99,7 +104,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README* THANKS
+%attr(755,root,root) %{_bindir}/gss
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%{_mandir}/man1/gss.1*
 
 %files devel
 %defattr(644,root,root,755)
