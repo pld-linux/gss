@@ -1,10 +1,10 @@
---- gss-0.0.3/doc/gss.texi.orig	2003-07-01 16:48:35.000000000 +0200
-+++ gss-0.0.3/doc/gss.texi	2003-08-03 00:08:58.000000000 +0200
-@@ -33,9 +33,9 @@
+--- gss-0.0.7/doc/gss.texi.orig	Wed Nov 26 13:47:14 2003
++++ gss-0.0.7/doc/gss.texi	Wed Nov 26 15:32:54 2003
+@@ -30,9 +30,9 @@
  @end quotation
  @end copying
  
--@dircategory Libraries
+-@dircategory GNU Libraries
 +@dircategory Libraries:
  @direntry
 -* gss: (gss).			Generic Security Service API Library
