@@ -1,0 +1,14 @@
+--- gss-0.0.3/doc/gss.texi.orig	2003-07-01 16:48:35.000000000 +0200
++++ gss-0.0.3/doc/gss.texi	2003-08-03 00:08:58.000000000 +0200
+@@ -33,9 +33,9 @@
+ @end quotation
+ @end copying
+ 
+-@dircategory Libraries
++@dircategory Libraries:
+ @direntry
+-* gss: (gss).			Generic Security Service API Library
++* gss: (gss).				Generic Security Service API Library
+ @end direntry
+ 
+ @titlepage
