@@ -1,18 +1,20 @@
 Summary:	Implementation of General Security Service API
 Summary(pl):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.14
+Version:	0.0.15
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	d7faa347651ab813aef627a1ba205deb
+# Source0-md5:	048c28d119e40ed0e8c36853f1538d7a
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
-BuildRequires:	autoconf >= 2.57
-BuildRequires:	automake >= 1.7
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1.9
 BuildRequires:	gettext-devel >= 0.14.1
+BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	rpmbuild(macros) >= 1.98
 BuildRequires:	shishi-devel >= 0.0.18
 BuildRequires:	texinfo
 Requires:	shishi >= 0.0.18
@@ -36,6 +38,7 @@ Summary:	Header files for GSS library
 Summary(pl):	Pliki nag³ówkowe biblioteki GSS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk-doc-common
 Requires:	shishi-devel >= 0.0.18
 
 %description devel
@@ -60,20 +63,18 @@ Statyczna biblioteka GSS.
 %setup -q
 %patch0 -p1
 
-# we don't have libtool 1.5a
-%{__perl} -pi -e 's/AC_LIBTOOL_TAGS//' configure.ac
-# incompatible with ksh
 rm -f m4/libtool.m4
 
 %build
-# blegh, lt incompatible with ksh - must rebuild
 %{__gettextize}
 %{__libtoolize}
 %{__aclocal} -I m4 -I gl/m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--enable-gtk-doc \
+	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
 
@@ -109,7 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/reference/*.{html,png}
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/gss.h
@@ -117,6 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/*.pc
 %{_infodir}/*.info*
 %{_mandir}/man3/gss*.3*
+%{_gtkdocdir}/gss
 
 %files static
 %defattr(644,root,root,755)
