@@ -1,20 +1,21 @@
 Summary:	Implementation of General Security Service API
 Summary(pl):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.13
+Version:	0.0.14
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	7058e665fb8666bd9a4274be9eb9f01a
+# Source0-md5:	d7faa347651ab813aef627a1ba205deb
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1.7
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	libtool >= 2:1.5
-BuildRequires:	shishi-devel >= 0.0.7
+BuildRequires:	shishi-devel >= 0.0.18
 BuildRequires:	texinfo
+Requires:	shishi >= 0.0.18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +36,7 @@ Summary:	Header files for GSS library
 Summary(pl):	Pliki nag³ówkowe biblioteki GSS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	shishi-devel >= 0.0.7
+Requires:	shishi-devel >= 0.0.18
 
 %description devel
 Header files for GSS library.
