@@ -10,7 +10,7 @@ Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.59
-BuildRequires:	automake >= 1.9
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	libtool >= 2:1.5
