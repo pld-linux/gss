@@ -1,0 +1,269 @@
+# Polish translation for gss.
+# This file is distributed under the same license as the gss package.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gss 0.0.10\n"
+"Report-Msgid-Bugs-To: bug-gss@josefsson.org\n"
+"POT-Creation-Date: 2004-01-22 19:43+0100\n"
+"PO-Revision-Date: 2004-02-22 23:27+0100\n"
+"Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/error.c:33
+msgid "A required input parameter could not be read"
+msgstr "Wymagany parametr wej¶ciowy nie móg³ byæ odczytany"
+
+#: lib/error.c:35
+msgid "A required output parameter could not be written"
+msgstr "Wymagany parametr wyj¶ciowy nie móg³ byæ zapisany"
+
+#: lib/error.c:37
+msgid "A parameter was malformed"
+msgstr "Parametr by³ ¼le sformu³owany"
+
+#: lib/error.c:42
+msgid "An unsupported mechanism was requested"
+msgstr "¯±dano nieobs³ugiwanego mechanizmu"
+
+#: lib/error.c:44
+msgid "An invalid name was supplied"
+msgstr "Podano b³êdn± nazwê"
+
+#: lib/error.c:46
+msgid "A supplied name was of an unsupported type"
+msgstr "Podana nazwa by³a nieobs³ugiwanego typu"
+
+#: lib/error.c:48
+msgid "Incorrect channel bindings were supplied"
+msgstr "Podano niepoprawne powi±zania kana³u"
+
+#: lib/error.c:50
+msgid "An invalid status code was supplied"
+msgstr "Podano b³êdny kod stanu"
+
+#: lib/error.c:52
+msgid "A token had an invalid MIC"
+msgstr "Token mia³ b³êdny MIC"
+
+#: lib/error.c:54
+msgid "No credentials were supplied, or the credentials were unavailable or inaccessible"
+msgstr "Nie podano danych uwierzytelniaj±cych lub by³y niedostêpne"
+
+#: lib/error.c:57
+msgid "No context has been established"
+msgstr "Nie ustalono kontekstu"
+
+#: lib/error.c:59
+msgid "A token was invalid"
+msgstr "Token by³ b³êdny"
+
+#: lib/error.c:61
+msgid "A credential was invalid"
+msgstr "Dane uwierzytelniaj±ce by³y niepoprawne"
+
+#: lib/error.c:63
+msgid "The referenced credentials have expired"
+msgstr "Wskazane dane uwierzytelniaj±ce wygas³y"
+
+#: lib/error.c:65
+msgid "The context has expired"
+msgstr "Kontekst wygas³"
+
+#: lib/error.c:67
+msgid "Unspecified error in underlying mechanism"
+msgstr "Nieokre¶lony b³±d w podrzêdnym mechanizmie"
+
+#: lib/error.c:69
+msgid "The quality-of-protection requested could not be provided"
+msgstr "¯±dana jako¶æ zabezpieczenia nie mog³a byæ zapewniona"
+
+#: lib/error.c:71
+msgid "The operation is forbidden by local security policy"
+msgstr "Operacja jest zabroniona przez lokaln± politykê bezpieczeñstwa"
+
+#: lib/error.c:73
+msgid "The operation or option is unavailable"
+msgstr "Operacja lub opcja jest niedostêpna"
+
+#: lib/error.c:75
+msgid "The requested credential element already exists"
+msgstr "¯±dany element danych uwierzytelniaj±cych ju¿ istnieje"
+
+#: lib/error.c:77
+msgid "The provided name was not a mechanism name"
+msgstr "Dostarczona nazwa nie by³a nazw± mechanizmu"
+
+#: lib/error.c:82
+msgid "The gss_init_sec_context() or gss_accept_sec_context() function must be called again to complete its function"
+msgstr "Funkcja gss_init_sec_context() lub gss_accept_sec_context() musi byæ wywo³ana ponownie aby dokoñczyæ funkcjê"
+
+#: lib/error.c:85
+msgid "The token was a duplicate of an earlier token"
+msgstr "Token by³ duplikatem wcze¶niejszego"
+
+#: lib/error.c:87
+msgid "The token's validity period has expired"
+msgstr "Okres poprawno¶ci tokenu min±³"
+
+#: lib/error.c:89
+msgid "A later token has already been processed"
+msgstr "Pó¼niejszy token by³ ju¿ przetworzony"
+
+#: lib/error.c:91
+msgid "An expected per-message token was not received"
+msgstr "Nie otrzymano oczekiwanego tokenu dla komunikatu"
+
+#: lib/error.c:288
+msgid "No error"
+msgstr "Brak b³êdu"
+
+#: lib/krb5/error.c:34
+msgid "No @ in SERVICE-NAME name string"
+msgstr "Brak @ w ³añcuchu nazwy SERVICE-NAME"
+
+#: lib/krb5/error.c:36
+msgid "STRING-UID-NAME contains nondigits"
+msgstr "STRING-UID-NAME zawiera znaki nie bêd±ce cyframi"
+
+#: lib/krb5/error.c:38
+msgid "UID does not resolve to username"
+msgstr "UID nie rozwi±zuje siê na nazwê u¿ytkownika"
+
+#: lib/krb5/error.c:40
+msgid "Validation error"
+msgstr "B³±d kontroli poprawno¶ci"
+
+#: lib/krb5/error.c:42
+msgid "Couldn't allocate gss_buffer_t data"
+msgstr "Nie mo¿na przydzieliæ danych gss_buffer_t"
+
+#: lib/krb5/error.c:44
+msgid "Message context invalid"
+msgstr "B³êdny kontekst komunikatu"
+
+#: lib/krb5/error.c:46
+msgid "Buffer is the wrong size"
+msgstr "Z³y rozmiar bufora"
+
+#: lib/krb5/error.c:48
+msgid "Credential usage type is unknown"
+msgstr "Nieznany sposób u¿ycia danych uwierzytelniaj±cych"
+
+#: lib/krb5/error.c:50
+msgid "Unknown quality of protection specified"
+msgstr "Podano nieznan± jako¶ zabezpieczenia"
+
+#: lib/krb5/error.c:53
+msgid "Principal in credential cache does not match desired name"
+msgstr "Zarz±dca w buforze danych uwierzytelniaj±cych nie pasuje do ¿±danej nazwy"
+
+#: lib/krb5/error.c:55
+msgid "No principal in keytab matches desired name"
+msgstr "¯aden zarz±dca w keytab nie pasuje do ¿±danej nazwy"
+
+#: lib/krb5/error.c:57
+msgid "Credential cache has no TGT"
+msgstr "Bufor danych uwierzytelniaj±cych nie zawiera TGT"
+
+#: lib/krb5/error.c:59
+msgid "Authenticator has no subkey"
+msgstr "Authenticator nie ma pola subkey"
+
+#: lib/krb5/error.c:61
+msgid "Context is already fully established"
+msgstr "Kontekst ju¿ zosta³ w pe³ni ustalony"
+
+#: lib/krb5/error.c:63
+msgid "Unknown signature type in token"
+msgstr "Nieznany rodzaj sygnatury w tokenie"
+
+#: lib/krb5/error.c:65
+msgid "Invalid field length in token"
+msgstr "B³êdna d³ugo¶æ pola w tokenie"
+
+#: lib/krb5/error.c:67
+msgid "Attempt to use incomplete security context"
+msgstr "Próba u¿ycia niepe³nego kontekstu bezpieczeñstwa"
+
+#: lib/krb5/error.c:84
+msgid "No krb5 error"
+msgstr "Brak b³êdu krb5"
+
+#: lib/krb5/error.c:113
+msgid "Unknown krb5 error"
+msgstr "Nieznany b³±d krb5"
+
+#: src/gss.c:64
+#, c-format
+msgid "%s: missing parameter\n"
+msgstr "%s: brakuj±cy parametr\n"
+
+#: src/gss.c:65
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "`%s --help' poda wiêcej informacji.\n"
+
+#: src/gss.c:72
+#, c-format
+msgid ""
+"GSS-API major status code %ld (0x%lx).\n"
+"\n"
+msgstr ""
+"G³ówny kod stanu GSS-API %ld (0x%lx).\n"
+"\n"
+
+#: src/gss.c:75
+#, c-format
+msgid ""
+"   MSB                                                                 LSB\n"
+"   +-----------------+-----------------+---------------------------------+\n"
+"   |  Calling Error  |  Routine Error  |       Supplementary Info        |\n"
+"   | "
+msgstr ""
+"   MSB                                                                 LSB\n"
+"   +-----------------+-----------------+---------------------------------+\n"
+"   |  B³±d wywo³ania |  B³±d procedury |       Dodatkowe informacje      |\n"
+"   | "
+
+#: src/gss.c:89
+#, c-format
+msgid ""
+"|\n"
+"   +-----------------+-----------------+---------------------------------+\n"
+"Bit 31            24  23            16  15                             0\n"
+"\n"
+msgstr ""
+"|\n"
+"   +-----------------+-----------------+---------------------------------+\n"
+"Bit 31            24  23            16  15                             0\n"
+"\n"
+
+#: src/gss.c:99
+#, c-format
+msgid "Masked routine error %ld (0x%lx) shifted into %ld (0x%lx):\n"
+msgstr "Maskowany b³±d procedury %ld (0x%lx) przesuniêty do %ld (0x%lx):\n"
+
+#: src/gss.c:116 src/gss.c:151 src/gss.c:189
+#, c-format
+msgid "%s: displaying status code failed\n"
+msgstr "%s: wy¶wietlanie kodu stanu nie powiod³o siê\n"
+
+#: src/gss.c:137
+#, c-format
+msgid "Masked calling error %ld (0x%lx) shifted into %ld (0x%lx):\n"
+msgstr "Maskowany b³±d wywo³ania %ld (0x%lx) przesuniêty do %ld (0x%lx):\n"
+
+#: src/gss.c:171
+#, c-format
+msgid "Masked supplementary info %ld (0x%lx) shifted into %ld (0x%lx):\n"
+msgstr "Maskowane dodatkowe informacje %ld (0x%lx) przesuniête do %ld (0x%lx):\n"
+
+#: src/gss.c:207
+#, c-format
+msgid "No error\n"
+msgstr "Brak b³êdu\n"
