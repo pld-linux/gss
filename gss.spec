@@ -14,6 +14,7 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.98
 BuildRequires:	shishi-devel >= 0.0.18
 BuildRequires:	texinfo
