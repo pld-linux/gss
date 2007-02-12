@@ -1,5 +1,5 @@
 Summary:	Implementation of General Security Service API
-Summary(pl):	Implementacja GSS API (General Security Service API)
+Summary(pl.UTF-8):   Implementacja GSS API (General Security Service API)
 Name:		gss
 Version:	0.0.19
 Release:	1
@@ -27,16 +27,16 @@ Program Interface (GSS-API). GSS-API is used by network servers to
 provide security services, e.g., to authenticate SMTP/IMAP clients
 against SMTP/IMAP servers.
 
-%description -l pl
+%description -l pl.UTF-8
 GSS to implementacja GSS-API (Generic Security Service Application
-Program Interface - og髄nego API us硊g bezpiecze駍twa). GSS-API jest
-u縴wane przez serwery sieciowe do udost阷niania us硊g bezpiecze駍twa,
-na przyk砤d uwierzytelniania klient體 SMTP/IMAP dla serwer體
+Program Interface - og贸lnego API us艂ug bezpiecze艅stwa). GSS-API jest
+u偶ywane przez serwery sieciowe do udost臋pniania us艂ug bezpiecze艅stwa,
+na przyk艂ad uwierzytelniania klient贸w SMTP/IMAP dla serwer贸w
 SMTP/IMAP.
 
 %package devel
 Summary:	Header files for GSS library
-Summary(pl):	Pliki nag丑wkowe biblioteki GSS
+Summary(pl.UTF-8):   Pliki nag艂贸wkowe biblioteki GSS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk-doc-common
@@ -45,19 +45,19 @@ Requires:	shishi-devel >= 0.0.18
 %description devel
 Header files for GSS library.
 
-%description devel -l pl
-Pliki nag丑wkowe biblioteki GSS.
+%description devel -l pl.UTF-8
+Pliki nag艂贸wkowe biblioteki GSS.
 
 %package static
 Summary:	Static GSS library
-Summary(pl):	Statyczna biblioteka GSS
+Summary(pl.UTF-8):   Statyczna biblioteka GSS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static GSS library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka GSS.
 
 %prep
