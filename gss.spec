@@ -1,5 +1,5 @@
 Summary:	Implementation of General Security Service API
-Summary(pl.UTF-8):   Implementacja GSS API (General Security Service API)
+Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
 Version:	0.0.19
 Release:	1
@@ -36,7 +36,7 @@ SMTP/IMAP.
 
 %package devel
 Summary:	Header files for GSS library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki GSS
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki GSS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk-doc-common
@@ -50,7 +50,7 @@ Pliki nagłówkowe biblioteki GSS.
 
 %package static
 Summary:	Static GSS library
-Summary(pl.UTF-8):   Statyczna biblioteka GSS
+Summary(pl.UTF-8):	Statyczna biblioteka GSS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
