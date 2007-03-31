@@ -2,7 +2,7 @@ Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
 Version:	0.0.19
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
@@ -84,9 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# conflicts with heimdal-devel
-mv -f $RPM_BUILD_ROOT%{_mandir}/man3/gss_acquire_cred.3{,gss}
 
 %find_lang %{name}
 
