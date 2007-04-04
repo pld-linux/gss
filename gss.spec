@@ -41,6 +41,8 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk-doc-common
 Requires:	shishi-devel >= 0.0.18
+# man3/gss_acquire_cred.3 file conflict
+Conflicts:	heimdal-devel
 
 %description devel
 Header files for GSS library.
