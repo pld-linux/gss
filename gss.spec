@@ -1,12 +1,12 @@
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.19
-Release:	2
+Version:	0.0.20
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	dfbec44c80171ebef434b629cb549934
+# Source0-md5:	aa611df9235f68faa97d226908ebc748
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.61
