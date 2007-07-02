@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
 Version:	0.0.22
 Release:	1
-License:	GPL
+License:	GPL v3+
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	e296992cc7fca764c1f32c3adffa089e
