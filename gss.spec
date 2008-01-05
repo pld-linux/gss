@@ -1,17 +1,17 @@
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.22
+Version:	0.0.23
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	e296992cc7fca764c1f32c3adffa089e
+# Source0-md5:	afce9fe4e6b037b6b10956cfed07e184
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
-BuildRequires:	gettext-devel >= 0.16
+BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
@@ -106,6 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README* THANKS
 %attr(755,root,root) %{_bindir}/gss
 %attr(755,root,root) %{_libdir}/libgss.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgss.so.0
 %{_mandir}/man1/gss.1*
 
 %files devel
@@ -114,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgss.la
 %{_includedir}/gss.h
 %{_includedir}/gss
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/gss.pc
 %{_infodir}/gss.info*
 %{_mandir}/man3/gss*.3*
 %{_gtkdocdir}/gss
