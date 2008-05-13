@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+#
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
@@ -76,6 +80,7 @@ rm -f m4/libtool.m4
 %{__autoheader}
 %{__automake}
 %configure \
+	%{!?with_static_libs:--disable-static} \
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
 
@@ -120,6 +125,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/gss*.3*
 %{_gtkdocdir}/gss
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libgss.a
+%endif
