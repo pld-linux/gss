@@ -9,7 +9,7 @@ Version:	0.0.23
 Release:	1
 License:	GPL v3+
 Group:		Libraries
-Source0:	http://josefsson.org/gss/releases/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
 # Source0-md5:	afce9fe4e6b037b6b10956cfed07e184
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
