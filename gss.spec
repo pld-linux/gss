@@ -5,12 +5,12 @@
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.0.26
+Version:	0.1.5
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://alpha.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
-# Source0-md5:	b5ce94d3e3171d1de97c72d6717b5080
+# Source0-md5:	d65431dd4dd35cfb8f4433b41ff75fbc
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://josefsson.org/gss/
@@ -113,7 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README* THANKS
 %attr(755,root,root) %{_bindir}/gss
 %attr(755,root,root) %{_libdir}/libgss.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgss.so.0
+%attr(755,root,root) %ghost %{_libdir}/libgss.so.1
 %{_mandir}/man1/gss.1*
 
 %files devel
