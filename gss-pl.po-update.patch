@@ -1,5 +1,5 @@
---- gss-0.1.5/po/pl.po.orig	2010-03-22 10:38:13.000000000 +0100
-+++ gss-0.1.5/po/pl.po	2010-03-25 09:30:02.654711083 +0100
+--- gss-1.0.0/po/pl.po.orig	2010-03-30 18:16:43.000000000 +0200
++++ gss-1.0.0/po/pl.po	2010-04-08 21:19:21.400988058 +0200
 @@ -1,13 +1,13 @@
  # Polish translation for gss.
  # This file is distributed under the same license as the gss package.
@@ -9,22 +9,22 @@
  msgid ""
  msgstr ""
 -"Project-Id-Version: gss 0.0.10\n"
-+"Project-Id-Version: gss 0.1.5\n"
- "Report-Msgid-Bugs-To: bug-gss@josefsson.org\n"
- "POT-Creation-Date: 2010-03-22 10:38+0100\n"
++"Project-Id-Version: gss 1.0.0\n"
+ "Report-Msgid-Bugs-To: bug-gss@gnu.org\n"
+ "POT-Creation-Date: 2010-03-30 18:16+0200\n"
 -"PO-Revision-Date: 2004-02-22 23:27+0100\n"
-+"PO-Revision-Date: 2010-03-25 09:23+0100\n"
++"PO-Revision-Date: 2010-04-08 21:15+0200\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "MIME-Version: 1.0\n"
 @@ -16,7 +16,7 @@
  
- #: lib/meta.c:43
+ #: lib/meta.c:38
  msgid "Kerberos V5 GSS-API mechanism"
 -msgstr ""
 +msgstr "Mechanizm Kerberos V5 GSS-API"
  
- #: lib/error.c:43
+ #: lib/error.c:37
  msgid "A required input parameter could not be read"
 @@ -217,18 +217,20 @@
  #: src/gss.c:68

@@ -5,12 +5,12 @@
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	0.1.5
+Version:	1.0.0
 Release:	1
 License:	GPL v3+
 Group:		Libraries
-Source0:	http://alpha.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
-# Source0-md5:	d65431dd4dd35cfb8f4433b41ff75fbc
+Source0:	http://ftp.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
+# Source0-md5:	d6288b3c0d8c5ef80c808f12ad74c7d8
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://josefsson.org/gss/
@@ -102,10 +102,10 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%post devel	-p	/sbin/postshell
+%post	devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun devel	-p	/sbin/postshell
+%postun	devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files -f %{name}.lang
@@ -113,7 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README* THANKS
 %attr(755,root,root) %{_bindir}/gss
 %attr(755,root,root) %{_libdir}/libgss.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgss.so.1
+%attr(755,root,root) %ghost %{_libdir}/libgss.so.3
 %{_mandir}/man1/gss.1*
 
 %files devel
