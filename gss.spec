@@ -16,8 +16,10 @@ Patch1:		%{name}-pl.po-update.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	gtk-doc >= 1.1
+BuildRequires:	help2man
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.98
