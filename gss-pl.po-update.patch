@@ -1,69 +1,69 @@
---- gss-1.0.0/po/pl.po.orig	2010-03-30 18:16:43.000000000 +0200
-+++ gss-1.0.0/po/pl.po	2010-04-08 21:19:21.400988058 +0200
-@@ -1,13 +1,13 @@
- # Polish translation for gss.
- # This file is distributed under the same license as the gss package.
--# Jakub Bogusz <qboosh@pld-linux.org>, 2004.
-+# Jakub Bogusz <qboosh@pld-linux.org>, 2004-2010.
+--- gss-1.0.1/po/pl.po.orig	2010-05-20 15:38:53.000000000 +0200
++++ gss-1.0.1/po/pl.po	2010-05-21 08:10:53.106935908 +0200
+@@ -5,10 +5,10 @@
  #
  msgid ""
  msgstr ""
--"Project-Id-Version: gss 0.0.10\n"
-+"Project-Id-Version: gss 1.0.0\n"
+-"Project-Id-Version: gss 0.1.5\n"
++"Project-Id-Version: gss 1.0.1\n"
  "Report-Msgid-Bugs-To: bug-gss@gnu.org\n"
- "POT-Creation-Date: 2010-03-30 18:16+0200\n"
--"PO-Revision-Date: 2004-02-22 23:27+0100\n"
-+"PO-Revision-Date: 2010-04-08 21:15+0200\n"
+ "POT-Creation-Date: 2010-05-20 15:38+0200\n"
+-"PO-Revision-Date: 2010-03-25 19:44+0100\n"
++"PO-Revision-Date: 2010-05-21 08:03+0200\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "MIME-Version: 1.0\n"
-@@ -16,7 +16,7 @@
- 
- #: lib/meta.c:38
- msgid "Kerberos V5 GSS-API mechanism"
--msgstr ""
-+msgstr "Mechanizm Kerberos V5 GSS-API"
- 
- #: lib/error.c:37
- msgid "A required input parameter could not be read"
-@@ -217,18 +217,20 @@
- #: src/gss.c:68
- #, c-format
- msgid "Usage: %s OPTIONS...\n"
--msgstr ""
-+msgstr "Sk³adnia: %s OPCJE...\n"
- 
- #: src/gss.c:71
- msgid ""
- "Command line interface to GSS, used to explain error codes.\n"
- "\n"
- msgstr ""
-+"Interfejs linii poleceñ do GSS s³u¿±cy do wyja¶niania kodów b³êdów.\n"
-+"\n"
- 
- #: src/gss.c:75
- msgid ""
- "Mandatory arguments to long options are mandatory for short options too.\n"
--msgstr ""
-+msgstr "Argumenty obowi±zkowe dla opcji d³ugich s± obowi±zkowe tak¿e dla opcji krótkich.\n"
- 
- #: src/gss.c:78
- msgid ""
-@@ -238,6 +240,10 @@
- "text.\n"
- "  -q, --quiet       Silent operation  (default=off)\n"
+@@ -244,10 +244,16 @@
+ "                    in a human readable format.\n"
+ "  -m, --major=LONG  Describe a `major status' error code value.\n"
  msgstr ""
 +"  -h, --help        Wypisanie tego opisu i zakoñczenie\n"
 +"  -V, --version     Wypisanie numeru wersji i zakoñczenie\n"
++"  -l, --list-mechanisms\n"
++"                    Wypisanie informacji o obs³ugiwanych mechanizmach\n"
++"                    w postaci czytelnej dla cz³owieka.\n"
 +"  -m, --major=LONG  Opis \"g³ównego\" kodu b³êdu w postaci tekstowej\n"
-+"  -q, --quiet       Dzia³anie bez komunikatów (domy¶lnie wy³±czone)\n"
  
- #: src/gss.c:119
+ #: src/gss.c:87
+ msgid "  -q, --quiet       Silent operation (default=off).\n"
+-msgstr ""
++msgstr "  -q, --quiet       Dzia³anie bez komunikatów (domy¶lnie wy³±czone)\n"
+ 
+ #: src/gss.c:106
  #, c-format
-@@ -299,6 +305,3 @@
+@@ -290,9 +296,9 @@
+ msgstr "Maskowany b³±d procedury %ld (0x%lx) przesuniêty do %ld (0x%lx):\n"
+ 
+ #: src/gss.c:150 src/gss.c:184 src/gss.c:221
+-#, fuzzy, c-format
++#, c-format
+ msgid "displaying status code failed (%d)"
+-msgstr "%s: wy¶wietlanie kodu stanu nie powiod³o siê\n"
++msgstr "wy¶wietlanie kodu stanu nie powiod³o siê (%d)"
+ 
+ #: src/gss.c:170
  #, c-format
- msgid "No error\n"
- msgstr "Brak b³êdu\n"
+@@ -313,21 +319,9 @@
+ #: src/gss.c:256
+ #, c-format
+ msgid "indicating mechanisms failed (%d)"
+-msgstr ""
++msgstr "wskazanie mechanizmów nie powiod³o siê (%d)"
+ 
+ #: src/gss.c:271
+ #, c-format
+ msgid "inquiring information about mechanism failed (%d)"
+-msgstr ""
 -
--#~ msgid "%s: missing parameter\n"
--#~ msgstr "%s: brakuj±cy parametr\n"
+-#~ msgid ""
+-#~ "  -h, --help        Print help and exit\n"
+-#~ "  -V, --version     Print version and exit\n"
+-#~ "  -m, --major=LONG  Describe a `major status' error code vaue in plain "
+-#~ "text.\n"
+-#~ "  -q, --quiet       Silent operation  (default=off)\n"
+-#~ msgstr ""
+-#~ "  -h, --help        Wypisanie tego opisu i zakoñczenie\n"
+-#~ "  -V, --version     Wypisanie numeru wersji i zakoñczenie\n"
+-#~ "  -m, --major=LONG  Opis \"g³ównego\" kodu b³êdu w postaci tekstowej\n"
+-#~ "  -q, --quiet       Dzia³anie bez komunikatów (domy¶lnie wy³±czone)\n"
++msgstr "zbieranie informacji o mechanizmach nie powiod³o siê (%d)"
