@@ -5,19 +5,18 @@
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
-# Source0-md5:	b044abfe64ad94e509f316c06d9b7422
+# Source0-md5:	cfc83094ce92fff2db7a759c6f7541f7
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-pl.po-update.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	gettext-devel >= 0.17
+BuildRequires:	gettext-devel >= 0.18.1
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:1.5
@@ -72,9 +71,8 @@ Statyczna biblioteka GSS.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
-rm -f m4/libtool.m4 po/stamp-po
+%{__rm} m4/libtool.m4 po/stamp-po
 
 %build
 %{__gettextize}
@@ -84,6 +82,7 @@ rm -f m4/libtool.m4 po/stamp-po
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	%{!?with_static_libs:--disable-static} \
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
