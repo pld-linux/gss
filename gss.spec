@@ -5,21 +5,21 @@
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
-# Source0-md5:	cfc83094ce92fff2db7a759c6f7541f7
+# Source0-md5:	441859b30bed73010d426c087c71aac5
 Patch0:		%{name}-info.patch
 URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	gettext-devel >= 0.18.1
+BuildRequires:	gettext-devel >= 0.19.2
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	help2man
-BuildRequires:	libtool >= 2:1.5
+BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.98
 BuildRequires:	shishi-devel >= 0.0.18
