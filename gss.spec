@@ -16,7 +16,7 @@ URL:		http://josefsson.org/gss/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	gettext-devel >= 0.19.2
+BuildRequires:	gettext-tools >= 0.19.2
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2
