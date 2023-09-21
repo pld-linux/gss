@@ -1,23 +1,23 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static library
 #
 Summary:	Implementation of General Security Service API
 Summary(pl.UTF-8):	Implementacja GSS API (General Security Service API)
 Name:		gss
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	GPL v3+
 Group:		Libraries
-Source0:	http://ftp.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
-# Source0-md5:	441859b30bed73010d426c087c71aac5
+Source0:	https://ftp.gnu.org/gnu/gss/%{name}-%{version}.tar.gz
+# Source0-md5:	2906b202fd5d955767a1f136006615f5
 Patch0:		%{name}-info.patch
-URL:		http://josefsson.org/gss/
-BuildRequires:	autoconf >= 2.61
-BuildRequires:	automake >= 1:1.10
+URL:		http://www.gnu.org/software/gss/
+BuildRequires:	autoconf >= 2.64
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	gettext-tools >= 0.19.2
-BuildRequires:	gtk-doc >= 1.1
+BuildRequires:	gettext-tools >= 0.19.8
+BuildRequires:	gtk-doc >= 1.14
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
@@ -77,7 +77,7 @@ Statyczna biblioteka GSS.
 %build
 %{__gettextize}
 %{__libtoolize}
-%{__aclocal} -I m4 -I gl/m4 -I lib/gl/m4 -I src/gl/m4
+%{__aclocal} -I m4 -I lib/gl/m4 -I src/gl/m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
